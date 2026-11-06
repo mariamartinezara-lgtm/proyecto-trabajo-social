@@ -1,4 +1,4 @@
-# [El papel del trabajador social en el acompañamiento a las familias con cancer]
+# El papel del trabajador social en el acompañamiento a las familias con cancer
 
 Proyecto de la asignatura **Informática para el Trabajo Social**, Universidad de Cádiz.
 
