@@ -19,9 +19,11 @@ Este Trabajo Fin de Grado analiza el impacto psicosocial del diagnóstico de cá
 
 ## Web del proyecto
 
-[Visita la web](https://[tu-usuario].github.io/[nombre-del-repositorio])
+[Visita la web](https://[mariamartinezara].github.io/[proyecto-trabajo-social
+])
 
-![[Describe la imagen en una frase]](img/[nombre-de-tu-imagen].png)
+![[Describe la imagen en una frase]](<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/373a9dd8-6bed-4e10-9071-33856ce8df75" />
+)
 
 ## Contenido del repositorio
 
