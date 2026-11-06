@@ -24,7 +24,7 @@ Este Trabajo Fin de Grado analiza el impacto psicosocial del diagnóstico de cá
 
 ![[Describe la imagen en una frase]](<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/373a9dd8-6bed-4e10-9071-33856ce8df75" />
 )
-
+Eres el pilar profesional que transforma la vulnerabilidad en fortaleza, acompañando y orientando a las personas para garantizar sus derechos y su bienestar integral.
 ## Contenido del repositorio
 
 - `index.html`: la web con el asistente
