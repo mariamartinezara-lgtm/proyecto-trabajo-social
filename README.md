@@ -10,12 +10,12 @@ Este Trabajo Fin de Grado analiza el impacto psicosocial del diagnóstico de cá
 ¿Cuál es el papel del trabajador social en el apoyo y acompañamiento a las familias de menores con cáncer durante el proceso de enfermedad?
 ## Objetivos
 
-- [Conocer las principales necesidades sociales y familiares que presentan las familias de menores con cáncer.
-]
-- [Analizar las funciones y la intervención del trabajador social en el acompañamiento y apoyo a estas familias.
-]
-- [Identificar los recursos y ayudas sociales que pueden facilitar la adaptación de las familias a la situación de enfermedad.
-]
+- Conocer las principales necesidades sociales y familiares que presentan las familias de menores con cáncer.
+
+- Analizar las funciones y la intervención del trabajador social en el acompañamiento y apoyo a estas familias.
+
+- Identificar los recursos y ayudas sociales que pueden facilitar la adaptación de las familias a la situación de enfermedad.
+
 
 ## Web del proyecto
 
@@ -32,4 +32,4 @@ Eres el pilar profesional que transforma la vulnerabilidad en fortaleza, acompa�
 
 ## Autoría
 
-[Maria Martinez Arana ] — curso [2026/2027]
+Maria Martinez Arana  — curso [2026/2027]
