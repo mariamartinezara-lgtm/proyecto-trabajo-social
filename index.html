@@ -3,22 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARÍA MARTÍNEZ | Trabajo Social Sanitario</title>
-    
-    <!-- Tipografías estilo editorial moda (Stradivarius aesthetic) -->
+    <title>El papel del trabajador social | María Martínez Arana</title>
+    <!-- Tipografías editoriales minimalistas estilo Stradivarius -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    
     <style>
-        /* VARIABLES DE COLOR Y TIPOGRAFÍA */
-        :root {
-            --bg-rosa: #D9829B;       /* Rosa editorial elegante */
-            --bg-rosa-oscuro: #C96E88; /* Variación sutil para bloques */
-            --texto-blanco: #FFFFFF;
-            --borde-fino: rgba(255, 255, 255, 0.35);
-        }
-
+        /* RESET Y ESTILOS GENERALES */
         * {
             margin: 0;
             padding: 0;
@@ -30,176 +22,255 @@
         }
 
         body {
-            background-color: var(--bg-rosa);
-            color: var(--texto-blanco);
+            background-color: #E598B3; /* Fondo rosa empolvado elegante */
+            color: #FFFFFF; /* Letras blancas */
             font-family: 'Montserrat', sans-serif;
             font-weight: 300;
-            line-height: 1.6;
+            line-height: 1.7;
+            letter-spacing: 0.04em;
             overflow-x: hidden;
         }
 
         a {
-            color: var(--texto-blanco);
+            color: #FFFFFF;
             text-decoration: none;
             transition: opacity 0.3s ease;
         }
 
         a:hover {
-            opacity: 0.65;
+            opacity: 0.7;
         }
 
-        /* BARRA SUPERIOR ESTILO STRADIVARIUS */
-        .top-banner {
-            text-align: center;
-            font-size: 0.65rem;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            padding: 8px 15px;
-            border-bottom: 1px solid var(--borde-fino);
-            background-color: var(--bg-rosa);
-        }
-
+        /* CABECERA ESTILO STRADIVARIUS */
         header {
-            position: sticky;
+            position: fixed;
             top: 0;
-            z-index: 1000;
+            width: 100%;
+            padding: 22px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 22px 5%;
-            background-color: rgba(217, 130, 155, 0.95);
+            background-color: rgba(229, 152, 179, 0.94);
             backdrop-filter: blur(6px);
-            border-bottom: 1px solid var(--borde-fino);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        .brand-logo {
+        .logo {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.9rem;
-            letter-spacing: 0.22em;
+            font-size: 1.6rem;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
             font-weight: 400;
         }
 
         nav ul {
-            display: flex;
             list-style: none;
-            gap: 32px;
+            display: flex;
+            gap: 30px;
         }
 
-        nav a {
+        nav ul li a {
             font-size: 0.72rem;
             text-transform: uppercase;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.18em;
             font-weight: 400;
         }
 
-        /* HERO EDITORIAL A PANTALLA COMPLETA */
-        .hero-editorial {
-            min-height: 85vh;
+        /* PORTADA PRINCIPAL (HERO EDITORIAL) */
+        .hero {
+            min-height: 92vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 60px 20px;
-            border-bottom: 1px solid var(--borde-fino);
+            padding: 130px 25px 80px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        .tag-editorial {
-            font-size: 0.7rem;
+        .hero-tag {
+            font-size: 0.72rem;
             text-transform: uppercase;
-            letter-spacing: 0.35em;
-            margin-bottom: 24px;
-            display: block;
-        }
-
-        .hero-editorial h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2.8rem, 6.5vw, 5.5rem);
-            font-weight: 400;
-            line-height: 1.05;
-            letter-spacing: 0.02em;
-            max-width: 950px;
-            margin-bottom: 28px;
-        }
-
-        .hero-editorial h1 em {
-            font-style: italic;
-        }
-
-        .hero-editorial p {
-            max-width: 560px;
-            font-size: 0.9rem;
-            letter-spacing: 0.05em;
-            margin-bottom: 42px;
+            letter-spacing: 0.28em;
+            margin-bottom: 22px;
             opacity: 0.95;
         }
 
-        .btn-stradi {
-            display: inline-block;
-            padding: 15px 45px;
-            border: 1px solid var(--texto-blanco);
-            font-size: 0.72rem;
-            text-transform: uppercase;
-            letter-spacing: 0.25em;
-            background: transparent;
-            transition: all 0.35s ease;
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+            font-weight: 400;
+            line-height: 1.12;
+            margin-bottom: 28px;
+            max-width: 950px;
         }
 
-        .btn-stradi:hover {
-            background-color: var(--texto-blanco);
-            color: var(--bg-rosa);
+        .hero-lema {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.35rem;
+            max-width: 720px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .btn-editorial {
+            display: inline-block;
+            padding: 14px 42px;
+            border: 1px solid #FFFFFF;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .btn-editorial:hover {
+            background-color: #FFFFFF;
+            color: #E598B3;
             opacity: 1;
         }
 
-        /* SECCIÓN DOBLE COLUMNA (PERFIL / MANIFIESTO) */
-        .editorial-split {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            border-bottom: 1px solid var(--borde-fino);
+        /* SECCIONES GENERALES */
+        .section-container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 95px 30px;
         }
 
-        .split-box {
-            padding: 90px 8%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .split-box:first-child {
-            border-right: 1px solid var(--borde-fino);
-            background-color: var(--bg-rosa-oscuro);
-        }
-
-        .split-box h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
-            font-weight: 400;
-            margin-bottom: 20px;
-            line-height: 1.15;
-        }
-
-        .split-box p {
-            font-size: 0.88rem;
-            margin-bottom: 18px;
-            letter-spacing: 0.04em;
-        }
-
-        /* CATÁLOGO DE INTERVENCIÓN (GRID MINIMALISTA) */
-        .services-section {
-            padding: 100px 5%;
-            border-bottom: 1px solid var(--borde-fino);
-        }
-
-        .section-header {
+        .section-title {
             text-align: center;
-            margin-bottom: 65px;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.28em;
+            margin-bottom: 50px;
+            font-weight: 400;
         }
 
-        .section-header span {
-            font-size: 0.68rem;
-            text-transform: uppercase;
-            letter-spacing: 0.3em;
-            display: block;
-            margin-bottom: 10px;
+        /* BLOQUE DE QUÉ TRATA + IMAGEN EDITORIAL */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 50px;
+            align-items: center;
         }
+
+        .about-text p {
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .about-image {
+            border: 1px solid #FFFFFF;
+            padding: 10px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* PREGUNTA DE INVESTIGACIÓN DESTACADA */
+        .research-question {
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 80px 30px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .research-question blockquote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+            font-style: italic;
+            max-width: 880px;
+            margin: 0 auto;
+            line-height: 1.35;
+        }
+
+        /* OBJETIVOS DEL PROYECTO (3 COLUMNAS) */
+        .grid-objectives {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 35px;
+        }
+
+        .objective-card {
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 45px 32px;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .objective-card:hover {
+            transform: translateY(-5px);
+            border-color: #FFFFFF;
+        }
+
+        .objective-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-style: italic;
+            display: block;
+            margin-bottom: 18px;
+        }
+
+        .objective-card h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+
+        .objective-card p {
+            font-size: 0.88rem;
+            opacity: 0.92;
+        }
+
+        /* SECCIÓN DE VÍDEO FINAL */
+        .video-section {
+            padding: 85px 30px 115px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .video-wrapper {
+            max-width: 850px;
+            margin: 0 auto;
+            border: 1px solid #FFFFFF;
+            padding: 12px;
+        }
+
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 55px 30px;
+            text-align: center;
+            font-size: 0.74rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        footer p {
+            margin-bottom:
