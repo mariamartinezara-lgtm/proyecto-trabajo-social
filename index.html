@@ -1,287 +1,205 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trabajo Social y familias con cáncer</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARÍA MARTÍNEZ | Trabajo Social Sanitario</title>
+    
+    <!-- Tipografías estilo editorial moda (Stradivarius aesthetic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f8fa;
-      color: #30343b;
-      line-height: 1.7;
-    }
+    <style>
+        /* VARIABLES DE COLOR Y TIPOGRAFÍA */
+        :root {
+            --bg-rosa: #D9829B;       /* Rosa editorial elegante */
+            --bg-rosa-oscuro: #C96E88; /* Variación sutil para bloques */
+            --texto-blanco: #FFFFFF;
+            --borde-fino: rgba(255, 255, 255, 0.35);
+        }
 
-    header {
-      background: #315c67;
-      color: white;
-      padding: 55px 20px;
-      text-align: center;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    header h1 {
-      max-width: 850px;
-      margin: auto;
-      font-size: 2.2rem;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    header p {
-      margin-top: 15px;
-    }
+        body {
+            background-color: var(--bg-rosa);
+            color: var(--texto-blanco);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    nav {
-      background: #244750;
-      padding: 14px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+        a {
+            color: var(--texto-blanco);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 7px 10px;
-      display: inline-block;
-      font-size: 0.95rem;
-    }
+        a:hover {
+            opacity: 0.65;
+        }
 
-    main {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 18px;
-    }
+        /* BARRA SUPERIOR ESTILO STRADIVARIUS */
+        .top-banner {
+            text-align: center;
+            font-size: 0.65rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            padding: 8px 15px;
+            border-bottom: 1px solid var(--borde-fino);
+            background-color: var(--bg-rosa);
+        }
 
-    section {
-      background: white;
-      padding: 28px;
-      margin-bottom: 25px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px #0000000b;
-    }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 5%;
+            background-color: rgba(217, 130, 155, 0.95);
+            backdrop-filter: blur(6px);
+            border-bottom: 1px solid var(--borde-fino);
+        }
 
-    h2 {
-      color: #315c67;
-      border-bottom: 2px solid #d8e5e7;
-      padding-bottom: 8px;
-    }
+        .brand-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.9rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
 
-    h3 {
-      color: #47727b;
-    }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
 
-    .pendiente {
-      background: #fff5dc;
-      border-left: 4px solid #d6a33d;
-      padding: 12px;
-      border-radius: 5px;
-    }
+        nav a {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 400;
+        }
 
-    .dato {
-      background: #edf4f5;
-      padding: 18px;
-      margin: 15px 0;
-      border-radius: 8px;
-    }
+        /* HERO EDITORIAL A PANTALLA COMPLETA */
+        .hero-editorial {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 1px solid var(--borde-fino);
+        }
 
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-    }
+        .tag-editorial {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.35em;
+            margin-bottom: 24px;
+            display: block;
+        }
 
-    .imagen {
-      background: #edf1f2;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      min-height: 130px;
-    }
+        .hero-editorial h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: 0.02em;
+            max-width: 950px;
+            margin-bottom: 28px;
+        }
 
-    footer {
-      background: #244750;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      margin-top: 35px;
-    }
+        .hero-editorial h1 em {
+            font-style: italic;
+        }
 
-    a {
-      color: #315c67;
-    }
+        .hero-editorial p {
+            max-width: 560px;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 42px;
+            opacity: 0.95;
+        }
 
-    nav a {
-      color: white;
-    }
-  </style>
-</head>
+        .btn-stradi {
+            display: inline-block;
+            padding: 15px 45px;
+            border: 1px solid var(--texto-blanco);
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            background: transparent;
+            transition: all 0.35s ease;
+        }
 
-<body>
+        .btn-stradi:hover {
+            background-color: var(--texto-blanco);
+            color: var(--bg-rosa);
+            opacity: 1;
+        }
 
-  <header>
-    <h1>El papel del trabajador social en el acompañamiento a las familias con cáncer</h1>
-    <p>Trabajo de Informática para el Trabajo Social</p>
-    <p>Universidad de Cádiz · [PENDIENTE: nombre y curso]</p>
-  </header>
+        /* SECCIÓN DOBLE COLUMNA (PERFIL / MANIFIESTO) */
+        .editorial-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid var(--borde-fino);
+        }
 
-  <nav>
-    <a href="#presentacion">Presentación</a>
-    <a href="#tema">El tema</a>
-    <a href="#datos">Datos</a>
-    <a href="#galeria">Galería</a>
-    <a href="#multimedia">Multimedia</a>
-    <a href="#intervencion">Intervención</a>
-    <a href="#referencias">Referencias</a>
-    <a href="#ia">Uso de IA</a>
-  </nav>
+        .split-box {
+            padding: 90px 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-  <main>
+        .split-box:first-child {
+            border-right: 1px solid var(--borde-fino);
+            background-color: var(--bg-rosa-oscuro);
+        }
 
-    <!-- ZONA 1: PRESENTACIÓN -->
-    <section id="presentacion">
-      <h2>1. Presentación</h2>
-      <p>
-        Este trabajo aborda el papel del Trabajo Social en el acompañamiento
-        a las familias que atraviesan un proceso de cáncer. Se pretende
-        conocer las necesidades sociales y familiares que pueden aparecer
-        durante la enfermedad y la importancia del apoyo profesional.
-      </p>
+        .split-box h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
 
-      <h3>Pregunta de investigación</h3>
-      <p>
-        ¿Qué papel desempeña el trabajador social en el acompañamiento
-        y apoyo a las familias con cáncer?
-      </p>
+        .split-box p {
+            font-size: 0.88rem;
+            margin-bottom: 18px;
+            letter-spacing: 0.04em;
+        }
 
-      <p><strong>Autor/a:</strong> [PENDIENTE]</p>
-      <p><strong>Asignatura:</strong> Informática para el Trabajo Social</p>
-    </section>
+        /* CATÁLOGO DE INTERVENCIÓN (GRID MINIMALISTA) */
+        .services-section {
+            padding: 100px 5%;
+            border-bottom: 1px solid var(--borde-fino);
+        }
 
-    <!-- ZONA 2: EXPLICACIÓN DEL TEMA -->
-    <section id="tema">
-      <h2>2. Explicación del tema</h2>
+        .section-header {
+            text-align: center;
+            margin-bottom: 65px;
+        }
 
-      <h3>¿En qué consiste esta problemática?</h3>
-      <p class="pendiente">[PENDIENTE: desarrollar la explicación del tema con información documentada.]</p>
-
-      <h3>¿A quién afecta?</h3>
-      <p class="pendiente">[PENDIENTE: explicar cómo puede afectar a las personas diagnosticadas y a sus familiares.]</p>
-
-      <h3>¿Qué dicen las fuentes consultadas?</h3>
-      <p class="pendiente">[PENDIENTE: incorporar información de las fuentes y sus citas correspondientes.]</p>
-
-      <h3>Relación con el Trabajo Social</h3>
-      <p class="pendiente">[PENDIENTE: explicar la importancia de la intervención social, la orientación y el acompañamiento familiar.]</p>
-    </section>
-
-    <!-- ZONA 3: DATOS -->
-    <section id="datos">
-      <h2>3. Datos y cifras</h2>
-      <p>
-        En este apartado se presentarán datos que permitan comprender
-        la dimensión del cáncer y su impacto social y familiar.
-      </p>
-
-      <div class="dato">
-        <h3>Dato 1</h3>
-        <p class="pendiente">[PENDIENTE: incorporar cifra, explicación, fuente, muestra, método y fecha.]</p>
-      </div>
-
-      <div class="dato">
-        <h3>Dato 2</h3>
-        <p class="pendiente">[PENDIENTE: incorporar cifra, explicación, fuente, muestra, método y fecha.]</p>
-      </div>
-
-      <div class="dato">
-        <h3>Dato 3</h3>
-        <p class="pendiente">[PENDIENTE: incorporar cifra, explicación, fuente, muestra, método y fecha.]</p>
-      </div>
-    </section>
-
-    <!-- ZONA 4: GALERÍA -->
-    <section id="galeria">
-      <h2>4. Galería de imágenes</h2>
-
-      <div class="galeria">
-        <div class="imagen">
-          <p>[PENDIENTE: imagen 1]</p>
-          <p><strong>Descripción:</strong> [PENDIENTE]</p>
-          <p><strong>Texto alternativo:</strong> [PENDIENTE]</p>
-        </div>
-
-        <div class="imagen">
-          <p>[PENDIENTE: imagen 2]</p>
-          <p><strong>Descripción:</strong> [PENDIENTE]</p>
-          <p><strong>Texto alternativo:</strong> [PENDIENTE]</p>
-        </div>
-
-        <div class="imagen">
-          <p>[PENDIENTE: imagen 3]</p>
-          <p><strong>Descripción:</strong> [PENDIENTE]</p>
-          <p><strong>Texto alternativo:</strong> [PENDIENTE]</p>
-        </div>
-      </div>
-
-      <p class="pendiente">Indicar si alguna imagen ha sido generada mediante inteligencia artificial.</p>
-    </section>
-
-    <!-- ZONA 5: MULTIMEDIA -->
-    <section id="multimedia">
-      <h2>5. Vídeo y audio</h2>
-
-      <h3>Vídeo</h3>
-      <p class="pendiente">[PENDIENTE: insertar vídeo y añadir su transcripción.]</p>
-
-      <h3>Audio</h3>
-      <p class="pendiente">[PENDIENTE: incorporar audio generado con NotebookLM.]</p>
-
-      <h3>Revisión del audio</h3>
-      <p class="pendiente">[PENDIENTE: explicar qué se ha revisado y qué cambios se han realizado, si los hubiera.]</p>
-    </section>
-
-    <!-- ZONA 6: PROPUESTA DE INTERVENCIÓN -->
-    <section id="intervencion">
-      <h2>6. Propuesta de intervención desde el Trabajo Social</h2>
-
-      <h3>Objetivo de la intervención</h3>
-      <p class="pendiente">[PENDIENTE: definir el objetivo principal.]</p>
-
-      <h3>Actuaciones propuestas</h3>
-      <p class="pendiente">[PENDIENTE: describir las actuaciones de acompañamiento, orientación y apoyo a las familias.]</p>
-
-      <h3>Personas participantes</h3>
-      <p class="pendiente">[PENDIENTE: identificar a las personas destinatarias y profesionales implicados.]</p>
-
-      <h3>Recursos necesarios</h3>
-      <p class="pendiente">[PENDIENTE: indicar recursos humanos, materiales e institucionales.]</p>
-    </section>
-
-    <!-- ZONA 7: REFERENCIAS -->
-    <section id="referencias">
-      <h2>7. Referencias bibliográficas</h2>
-      <p class="pendiente">[PENDIENTE: añadir todas las fuentes utilizadas siguiendo las normas APA 7.]</p>
-    </section>
-
-    <!-- ZONA 8: HERRAMIENTAS DE IA -->
-    <section id="ia">
-      <h2>8. Herramientas de inteligencia artificial</h2>
-      <p class="pendiente">[PENDIENTE: indicar qué herramientas de IA se han utilizado, para qué y cómo se ha comprobado la información obtenida.]</p>
-    </section>
-
-    <!-- ZONA 9: CHATBOT -->
-    <!-- NO MODIFICAR ESTA ZONA -->
-
-  </main>
-
-  <footer>
-    <p>Trabajo de Informática para el Trabajo Social · Universidad de Cádiz</p>
-  </footer>
-
-</body>
-</html>
+        .section-header span {
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            display: block;
+            margin-bottom: 10px;
+        }
