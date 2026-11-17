@@ -4,62 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El papel del trabajador social | María Martínez Arana</title>
-    <!-- Tipografías editoriales minimalistas estilo Stradivarius -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
-        /* RESET Y ESTILOS GENERALES */
+        /* RESET TOTAL PARA EVITAR BLOQUEOS DE PANTALLA */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: #E598B3; /* Fondo rosa empolvado elegante */
-            color: #FFFFFF; /* Letras blancas */
-            font-family: 'Montserrat', sans-serif;
+        html, body {
+            background-color: #DF8CA8 !important; /* Rosa editorial con buen contraste */
+            color: #FFFFFF !important; /* Letras blancas garantizadas */
+            font-family: 'Montserrat', Arial, sans-serif;
             font-weight: 300;
             line-height: 1.7;
             letter-spacing: 0.04em;
             overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, p, span, a, blockquote, li {
+            color: #FFFFFF !important;
         }
 
         a {
-            color: #FFFFFF;
             text-decoration: none;
             transition: opacity 0.3s ease;
         }
 
         a:hover {
-            opacity: 0.7;
+            opacity: 0.75;
         }
 
-        /* CABECERA ESTILO STRADIVARIUS */
+        /* BARRA SUPERIOR ESTILO STRADIVARIUS */
         header {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
-            padding: 22px 50px;
+            padding: 20px 45px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: rgba(229, 152, 179, 0.94);
-            backdrop-filter: blur(6px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            background-color: rgba(223, 140, 168, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            z-index: 9999;
         }
 
-        .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.6rem;
-            letter-spacing: 0.16em;
+        .brand-logo {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.65rem;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
             font-weight: 400;
         }
@@ -67,18 +66,19 @@
         nav ul {
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 28px;
         }
 
         nav ul li a {
             font-size: 0.72rem;
             text-transform: uppercase;
-            letter-spacing: 0.18em;
+            letter-spacing: 0.2em;
             font-weight: 400;
         }
 
-        /* PORTADA PRINCIPAL (HERO EDITORIAL) */
-        .hero {
+        /* PORTADA EDITORIAL ESTILO CAMPAÑA DE MODA */
+        .hero-campaign {
+            position: relative;
             min-height: 92vh;
             display: flex;
             flex-direction: column;
@@ -86,174 +86,174 @@
             align-items: center;
             text-align: center;
             padding: 130px 25px 80px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            background: linear-gradient(rgba(223, 140, 168, 0.78), rgba(223, 140, 168, 0.85)),
+                        url('https://github.com/user-attachments/assets/373a9dd8-6bed-4e10-9071-33856ce8df75') center/cover no-repeat;
         }
 
-        .hero-tag {
-            font-size: 0.72rem;
+        .campaign-tag {
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.28em;
-            margin-bottom: 22px;
-            opacity: 0.95;
+            letter-spacing: 0.3em;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #FFFFFF;
+            padding-bottom: 6px;
         }
 
-        .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+        .hero-campaign h1 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(2.4rem, 5vw, 4.3rem);
             font-weight: 400;
-            line-height: 1.12;
-            margin-bottom: 28px;
-            max-width: 950px;
+            line-height: 1.15;
+            max-width: 920px;
+            margin-bottom: 25px;
         }
 
         .hero-lema {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Cormorant Garamond', Georgia, serif;
             font-style: italic;
             font-size: 1.35rem;
             max-width: 720px;
-            margin-bottom: 40px;
-            opacity: 0.95;
+            margin-bottom: 38px;
         }
 
-        .btn-editorial {
+        .btn-stradivarius {
             display: inline-block;
-            padding: 14px 42px;
+            padding: 15px 44px;
             border: 1px solid #FFFFFF;
-            font-size: 0.72rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.22em;
-            background: transparent;
+            background-color: transparent;
             transition: all 0.3s ease;
         }
 
-        .btn-editorial:hover {
+        .btn-stradivarius:hover {
             background-color: #FFFFFF;
-            color: #E598B3;
+            color: #DF8CA8 !important;
             opacity: 1;
         }
 
-        /* SECCIONES GENERALES */
-        .section-container {
+        /* CONTENEDOR DE SECCIONES */
+        .editorial-section {
             max-width: 1150px;
             margin: 0 auto;
-            padding: 95px 30px;
+            padding: 90px 30px;
         }
 
-        .section-title {
+        .section-heading {
             text-align: center;
-            font-size: 0.78rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.28em;
             margin-bottom: 50px;
             font-weight: 400;
         }
 
-        /* BLOQUE DE QUÉ TRATA + IMAGEN EDITORIAL */
-        .about-grid {
+        /* BLOQUE EDITORIAL: TEXTO + IMAGEN */
+        .split-editorial {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
             gap: 50px;
             align-items: center;
         }
 
-        .about-text p {
-            font-size: 0.95rem;
-            margin-bottom: 25px;
+        .editorial-copy p {
+            font-size: 0.96rem;
+            margin-bottom: 22px;
             text-align: justify;
         }
 
-        .about-image {
+        .editorial-frame {
             border: 1px solid #FFFFFF;
-            padding: 10px;
+            padding: 12px;
         }
 
-        .about-image img {
+        .editorial-frame img {
             width: 100%;
             height: auto;
             display: block;
-            object-fit: cover;
         }
 
-        /* PREGUNTA DE INVESTIGACIÓN DESTACADA */
-        .research-question {
-            border-top: 1px solid rgba(255, 255, 255, 0.3);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        /* PREGUNTA DE INVESTIGACIÓN */
+        .quote-banner {
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
             padding: 80px 30px;
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: rgba(255, 255, 255, 0.08);
         }
 
-        .research-question blockquote {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+        .quote-banner blockquote {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
             font-style: italic;
-            max-width: 880px;
+            max-width: 860px;
             margin: 0 auto;
             line-height: 1.35;
         }
 
-        /* OBJETIVOS DEL PROYECTO (3 COLUMNAS) */
-        .grid-objectives {
+        /* CATÁLOGO DE OBJETIVOS (3 COLUMNAS) */
+        .lookbook-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 35px;
         }
 
-        .objective-card {
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            padding: 45px 32px;
+        .lookbook-card {
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            padding: 45px 30px;
             text-align: center;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
-        .objective-card:hover {
+        .lookbook-card:hover {
             transform: translateY(-5px);
-            border-color: #FFFFFF;
+            background-color: rgba(255, 255, 255, 0.08);
         }
 
-        .objective-num {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.6rem;
+        .card-num {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.7rem;
             font-style: italic;
             display: block;
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
 
-        .objective-card h3 {
+        .lookbook-card h3 {
             font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.16em;
+            letter-spacing: 0.18em;
             margin-bottom: 16px;
-            font-weight: 400;
+            font-weight: 500;
         }
 
-        .objective-card p {
-            font-size: 0.88rem;
-            opacity: 0.92;
+        .lookbook-card p {
+            font-size: 0.9rem;
         }
 
-        /* SECCIÓN DE VÍDEO FINAL */
-        .video-section {
-            padding: 85px 30px 115px;
+        /* VÍDEO FINAL */
+        .video-showcase {
+            padding: 85px 30px 110px;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
         }
 
-        .video-wrapper {
+        .video-frame {
             max-width: 850px;
             margin: 0 auto;
             border: 1px solid #FFFFFF;
             padding: 12px;
         }
 
-        .video-responsive {
+        .video-ratio {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
         }
 
-        .video-responsive iframe {
+        .video-ratio iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -264,13 +264,120 @@
 
         /* PIE DE PÁGINA */
         footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 55px 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 50px 25px;
             text-align: center;
-            font-size: 0.74rem;
-            letter-spacing: 0.16em;
+            font-size: 0.75rem;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
         }
 
         footer p {
-            margin-bottom:
+            margin-bottom: 8px;
+        }
+
+        /* RESPONSIVE MÓVIL */
+        @media (max-width: 850px) {
+            header {
+                padding: 16px 20px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav ul {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .split-editorial {
+                grid-template-columns: 1fr;
+            }
+            .hero-campaign {
+                padding-top: 155px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-logo">María Martínez Arana</div>
+        <nav>
+            <ul>
+                <li><a href="#proyecto">El Proyecto</a></li>
+                <li><a href="#investigacion">Investigación</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#video">Vídeo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-campaign">
+        <span class="campaign-tag">Informática para el Trabajo Social · Universidad de Cádiz</span>
+        <h1>El papel del trabajador social en el acompañamiento a las familias con cáncer</h1>
+        <p class="hero-lema">«Eres el pilar profesional que transforma la vulnerabilidad en fortaleza, acompañando y orientando a las personas para garantizar sus derechos y su bienestar integral.»</p>
+        <a href="#proyecto" class="btn-stradivarius">Explorar proyecto</a>
+    </section>
+
+    <section id="proyecto" class="editorial-section">
+        <h2 class="section-heading">De qué trata el proyecto</h2>
+        <div class="split-editorial">
+            <div class="editorial-copy">
+                <p>Este Trabajo Fin de Grado analiza el impacto psicosocial del diagnóstico de cáncer pediátrico en el núcleo familiar y delimita las funciones clave del trabajador social sanitario.</p>
+                <p>A través de este estudio, se aborda la intervención en situaciones de crisis, la orientación para la tramitación de recursos socioeconómicos y el acompañamiento continuado durante el tratamiento.</p>
+                <p>Además, destaca la importancia de la coordinación interprofesional y con el tercer sector para garantizar una atención integral que reduzca la vulnerabilidad de las familias.</p>
+            </div>
+            <div class="editorial-frame">
+                <img src="https://github.com/user-attachments/assets/373a9dd8-6bed-4e10-9071-33856ce8df75" alt="Trabajo Social Sanitario">
+            </div>
+        </div>
+    </section>
+
+    <section id="investigacion" class="quote-banner">
+        <h2 class="section-heading" style="margin-bottom: 22px;">Pregunta de Investigación</h2>
+        <blockquote>
+            «¿Cuál es el papel del trabajador social en el apoyo y acompañamiento a las familias de menores con cáncer durante el proceso de enfermedad?»
+        </blockquote>
+    </section>
+
+    <section id="objetivos" class="editorial-section">
+        <h2 class="section-heading">Objetivos del Estudio</h2>
+        <div class="lookbook-grid">
+            <div class="lookbook-card">
+                <span class="card-num">01</span>
+                <h3>Necesidades Familiares</h3>
+                <p>Conocer las principales necesidades sociales y familiares que presentan las familias de menores con cáncer.</p>
+            </div>
+            <div class="lookbook-card">
+                <span class="card-num">02</span>
+                <h3>Intervención Profesional</h3>
+                <p>Analizar las funciones y la intervención del trabajador social en el acompañamiento y apoyo a estas familias.</p>
+            </div>
+            <div class="lookbook-card">
+                <span class="card-num">03</span>
+                <h3>Recursos y Ayudas</h3>
+                <p>Identificar los recursos y ayudas sociales que pueden facilitar la adaptación de las familias a la situación de enfermedad.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="video" class="video-showcase">
+        <h2 class="section-heading">Recurso Audiovisual</h2>
+        <div class="video-frame">
+            <div class="video-ratio">
+                <iframe 
+                    src="https://www.youtube.com/embed/t4V1fI_U7XA" 
+                    title="Vídeo Trabajo Social Sanitario" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>María Martínez Arana — Curso 2026/2027</p>
+        <p>Informática para el Trabajo Social · Universidad de Cádiz</p>
+    </footer>
+
+</body>
+</html>
